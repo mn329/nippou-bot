@@ -9,11 +9,17 @@ npm run deploy
 
 [Discord Interaction Endpoint 用の公開鍵を設定]
 
-`DISCORD_PUBLIC_KEY` は `wrangler.jsonc` の `vars` で管理します。
+このプロジェクトでは `.env.vars` で環境変数を管理します。
 
-1. `wrangler.jsonc` の `vars.DISCORD_PUBLIC_KEY` に値を設定
-2. ローカル実行: `npm run dev`
-3. デプロイ: `npm run deploy`
+1. プロジェクト直下に `.env.vars` を作成
+2. 次の形式で値を設定
+
+```txt
+DISCORD_PUBLIC_KEY=YOUR_DISCORD_PUBLIC_KEY
+```
+
+3. ローカル実行: `npm run dev`
+4. デプロイ: `npm run deploy`
 
 [For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
 
